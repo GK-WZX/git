@@ -59,3 +59,13 @@
 		```
 	* 作用
 		* 将暂存区的内容提交到本地库
+4. 查看历史记录
+	1. `git log`
+		* 多屏显示控制方式
+			* 空格向下翻页
+			* b 向上翻页
+			* q 退出
+	2. `git log --pretty=oneline`
+	3. `git log --oneline`
+	4. `git reflog`
+		* HEAD@{移动到该版本需要的步数}
