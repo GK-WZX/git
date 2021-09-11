@@ -69,3 +69,32 @@
 	3. `git log --oneline`
 	4. `git reflog`
 		* HEAD@{移动到该版本需要的步数}
+5. 前进后退
+	1. 本质
+		HEAD指针指向各个版本，版本的前进回退本质就是HEAD指针指向不同的版本。
+	2. 基于索引值操作[推荐]
+		```shell
+		git reset --hard [局部索引值]
+		```
+
+	3. 使用^符号：只能后退
+		```shell
+		# 一个^符号代表后退一步，n个^表示后退n步
+		git reset --hard HEAD^
+		```
+
+	4. 使用~符号：只能后退
+		```shell
+		# 后退n步
+		git reset --hard HEAD~n
+		```
+6. reset命令三个参数命令对比
+	* `--soft`参数
+		* 仅仅在本地库移动HEAD指针
+	* `--mixed`参数
+		* 在本地库移动HEAD指针
+		* 重置暂存区
+	* `--merge`参数
+		* 在本地库移动HEAD指针
+		* 重置暂存区
+		* 重置工作区
