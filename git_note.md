@@ -191,9 +191,36 @@
 		```shell
 		git remote add [别名] [远程库地址]
 		```
+	
+	* 删除别名
+		```shell
+		git remote rm [别名]
+		```
+	
+	* 重命名别名
+		```shell
+		git remote rename [old name] [new name]
+		```
+
+	* 更改远程库的url
+		```shell
+		git remote set-url [old url] [new url]
+		```
 
 	![alias](./imgs/alias_01.png)
 2. 推送
 	```shell
 	git push [远程库地址或别名] [远程库分支]
 	```
+
+	* Note: 第一次推送需要输入用户名和访问令牌
+
+3. 克隆
+	* 命令
+		```shell
+		git clone [远程库地址]
+		```
+	* 作用
+		1. 完整的把库下载到本地
+		2. 创建origin远程库的别名
+		3. 初始化本地库
