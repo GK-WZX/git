@@ -232,3 +232,8 @@
 		1. 完整的把库下载到本地
 		2. 创建origin远程库的别名
 		3. 初始化本地库
+
+4. 邀请团队成员
+	1. 团队负责人github的仓库界面中，选“settings” -> “Manage access” -> “Invite a collaborator”
+		![settings](./imgs/邀请_settings.png)
+		![ManageAccess](./imgs/邀请_ManageAccess.png)
