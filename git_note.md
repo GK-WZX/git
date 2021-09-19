@@ -241,10 +241,12 @@
 5. 拉取
 	1. 拉取操作`pull`相当与`fetch`操作和`merge`操作的集合
 		```shell
-		# 将远程库内容拉取到本地操作相当于下面两个命令
+		# 将远程库内容拉取到本地操作相当于fetch + merge操作
 		git pull [远程库地址/别名]
 
 		```
+
+		![pull](./imgs/拉取_pull.png)
 
 		```shell
 		# fetch操作会将远程库内容抓取到本地，但是不会修改本地库的工作区，而是更新远程分支的内容
@@ -253,3 +255,4 @@
 		# 用merge操作将远程分支合并到本地分支，冲突处理如常
 		git merge [抓取远程库所创建分支名]
 		```
+		![fetch+merge](,/imgs/拉取_fetch+merge.png)
