@@ -191,6 +191,7 @@
 		```shell
 		git remote add [别名] [远程库地址]
 		```
+		![alias](./imgs/alias_01.png)
 	
 	* 删除别名
 		```shell
@@ -206,14 +207,21 @@
 		```shell
 		git remote set-url [old url] [new url]
 		```
+	
+	* 远程库地址
+		1. 不带token:`https://github.com/<user_name>/<repo_name>.git
+			* 例如：`https://github.com/guoke2017/git.git`
+		2. 带token:`https://<token>@github.com/<user_name>/<repo_name>.git
+			* 例如：`https://ghp_sdF6QFsopUCtjcqb4MxzSgVVFU40UJQWv@github.com/guoke2017/git.git`
 
-	![alias](./imgs/alias_01.png)
 2. 推送
-	```shell
-	git push [远程库地址或别名] [远程库分支]
-	```
-
-	* Note: 第一次推送需要输入用户名和访问令牌
+	* 命令
+		```shell
+		git push [远程库地址或别名] [远程库分支]
+		```
+	* Note
+		* 当远程库地址不带有token时，每次push都要输入用户名和token
+		* 可以将token写进远程库地址中，这样就不用每次都输入token了
 
 3. 克隆
 	* 命令
