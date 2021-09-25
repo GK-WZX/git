@@ -243,7 +243,7 @@
 		```shell
 		# 将远程库内容拉取到本地操作相当于fetch + merge操作
 		git pull [远程库地址/别名]
-
+		
 		```
 
 		![pull](./imgs/拉取_pull.png)
@@ -251,13 +251,63 @@
 		```shell
 		# fetch操作会将远程库内容抓取到本地，但是不会修改本地库的工作区，而是更新远程分支的内容
 		git fetch [远程库地址/别名] [远程库分支名]
-
+		
 		# 用merge操作将远程分支合并到本地分支，冲突处理如常
 		git merge [抓取远程库所创建分支名]
 		```
-		![fetch+merge](,/imgs/拉取_fetch+merge.png)
 
 6. 解决冲突
 	1. 要点
 		* 如果不是基于Github远程库的最新版所做的修改，不能推送，必须先拉取。
 		* 拉取下来之后如果进入冲突状态，则按照“分支冲突解决”操作解决即可。
+			![fetch+merge](./imgs/拉取_fetch+merge.png)
+
+7. 跨团队协作
+  1. 团队外的人访问仓库，并点击右上角`Fork`
+  	* 作用：拷贝该仓库到自己的GitHub，这是属于`Fork`的人的仓库，其有权更改，但是并不会影响被`Fork`的仓库内容。
+  	* 下面是用户guoke2017`Fork`用户guoke-master的git仓库的效果：
+  		![Fork效果](./imgs/跨团队协作_Fork.png)
+  	
+  2. 本地修改，推送到远程
+
+  3. Pull requests
+
+     * 团队外人员操作
+
+       ![Pull requests](./imgs/跨团队协作_Pull requests.png)
+
+       ![New pull request](./imgs/跨团队协作_New pull request.png)
+
+       ![Create pull request](./imgs/跨团队协作_Create pull request.png)
+
+       ![Create pull request_2](./imgs/跨团队协作_Create pull request_2.png)
+
+     * 团队人员操作
+
+       * 查看`Pull requests`
+
+         ![查看](./imgs/跨团队协作_查看Pull requests.png)
+
+         ![查看](./imgs/跨团队协作_查看Pull requests_2.png)
+
+         ![查看](./imgs/跨团队协作_处理Pull requests.png)
+
+       * 审查代码
+
+         ![审查](./imgs/跨团队协作_审查Pull requests.png)
+
+       * 合并
+
+         ![合并](./imgs/跨团队协作_合并Pull requests.png)
+
+       
+
+       
+
+       
+
+       
+
+  
+
+>>>>>>> 060e5c92fe139a3d4183356dfdc1e04e884f71b1
